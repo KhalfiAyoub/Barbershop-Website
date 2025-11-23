@@ -566,10 +566,13 @@
             font-size: 0.9rem;
             transition: all 0.3s ease;
             cursor: pointer;
+            display: inline-block;
+            padding: 0.5rem 0;
         }
         
         .read-more:hover {
             color: var(--light);
+            transform: translateX(5px);
         }
 
         /* Team Section */
@@ -1006,6 +1009,10 @@
             padding: 2rem;
         }
 
+        .modal.active {
+            display: block;
+        }
+
         .modal-content {
             max-width: 900px;
             margin: 2rem auto;
@@ -1335,30 +1342,6 @@
             .testimonials-container,
             .contact-container {
                 max-width: 1400px;
-            }
-        }
-
-        /* Print Styles */
-        @media print {
-            .modal,
-            .mobile-menu-btn,
-            .mobile-nav,
-            .overlay {
-                display: none !important;
-            }
-
-            header {
-                position: static;
-                background: var(--dark);
-            }
-
-            .hero {
-                height: auto;
-                padding: 4rem 0;
-            }
-
-            .newsletter {
-                display: none;
             }
         }
     </style>
@@ -1709,7 +1692,6 @@
         <p class="copyright">© 2024 Barber House. All rights reserved. | Privacy Policy | Terms of Service</p>
     </footer>
 
-    <!-- Modals (le code des modales reste identique) -->
     <!-- About Modal -->
     <div id="about-modal" class="modal">
         <div class="modal-content">
@@ -1742,29 +1724,227 @@
         </div>
     </div>
 
-    <!-- Service Modals (le code reste identique) -->
+    <!-- Service Modals -->
     <div id="hair-styling-modal" class="modal">
-        <!-- Contenu identique -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Hair Styling</h2>
+                <button class="close-btn" onclick="closeModal('hair-styling-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Comprehensive Hair Services</h3>
+                    <p>Our hair styling services go beyond simple haircuts. We offer personalized consultations to understand your hair type, face shape, and lifestyle to create a style that enhances your features and fits your personality.</p>
+                </div>
+                <div class="service-details">
+                    <div class="service-feature">
+                        <h4>Classic Cuts</h4>
+                        <p>Traditional styles executed with precision and attention to detail.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Modern Styles</h4>
+                        <p>Contemporary cuts including fades, undercuts, and textured styles.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Consultation</h4>
+                        <p>Personalized advice on styling, maintenance, and product selection.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Finishing</h4>
+                        <p>Professional styling with premium products for lasting results.</p>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>What to Expect</h3>
+                    <p>Each hair styling session includes a thorough consultation, precision cutting using both scissors and clippers, shampoo and conditioning treatment, and professional styling with premium products. Our barbers will also provide guidance on maintaining your style between visits.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="coloring-modal" class="modal">
-        <!-- Contenu identique -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Hair & Beard Coloring</h2>
+                <button class="close-btn" onclick="closeModal('coloring-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Professional Coloring Services</h3>
+                    <p>Our coloring experts use premium, ammonia-free products to deliver natural-looking results that enhance your features. Whether you're covering gray, refreshing your color, or trying something new, we ensure beautiful, healthy-looking results.</p>
+                </div>
+                <div class="service-details">
+                    <div class="service-feature">
+                        <h4>Gray Coverage</h4>
+                        <p>Natural-looking coverage that blends seamlessly with your existing hair.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Highlights & Lowlights</h4>
+                        <p>Dimensional coloring to add depth and texture to your hair.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Beard Coloring</h4>
+                        <p>Specialized coloring techniques for facial hair.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Color Correction</h4>
+                        <p>Expert solutions for fixing previous coloring mistakes.</p>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>Our Approach</h3>
+                    <p>We begin with a thorough consultation to understand your desired outcome and assess your hair's condition. Our colorists then create a custom formula and application technique to achieve your goals while maintaining the health and integrity of your hair.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="beard-care-modal" class="modal">
-        <!-- Contenu identique -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Beard Care</h2>
+                <button class="close-btn" onclick="closeModal('beard-care-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Comprehensive Beard Services</h3>
+                    <p>A well-groomed beard requires more than just trimming. Our beard care services address both the hair and the skin beneath to ensure your beard looks its best and feels comfortable.</p>
+                </div>
+                <div class="service-details">
+                    <div class="service-feature">
+                        <h4>Beard Trim & Shape</h4>
+                        <p>Precision trimming to maintain your desired shape and length.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Beard Conditioning</h4>
+                        <p>Deep conditioning treatments to soften hair and reduce itchiness.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Skin Care</h4>
+                        <p>Exfoliation and moisturizing for the skin beneath your beard.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Styling Advice</h4>
+                        <p>Personalized guidance on products and techniques for maintenance.</p>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>The Barber House Difference</h3>
+                    <p>Our beard specialists are trained in both the art of beard styling and the science of skin health. We use specialized tools and premium products to ensure your beard not only looks great but is healthy and comfortable to wear.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="shave-modal" class="modal">
-        <!-- Contenu identique -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Hot Towel Shave</h2>
+                <button class="close-btn" onclick="closeModal('shave-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>The Ultimate Shaving Experience</h3>
+                    <p>Experience the luxury and precision of a traditional barber shop shave. Our hot towel shave service is a multi-step process that delivers the closest, most comfortable shave you'll ever have.</p>
+                </div>
+                <div class="service-details">
+                    <div class="service-feature">
+                        <h4>Steam Towel</h4>
+                        <p>Warm towels to open pores and soften facial hair.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Premium Pre-Shave</h4>
+                        <p>Specialized oils to prepare the skin and hair for shaving.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Straight Razor</h4>
+                        <p>Traditional straight razor technique for ultimate precision.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Post-Shave Care</h4>
+                        <p>Cooling treatments and moisturizers to soothe the skin.</p>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>The Process</h3>
+                    <p>Our hot towel shave begins with a facial steam treatment to open pores and soften hair. We then apply premium pre-shave oils and create a rich lather with a badger hair brush. Using a straight razor, our barbers perform multiple passes for an exceptionally close shave, finishing with cold compresses and specialized post-shave products to calm and protect your skin.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="facial-modal" class="modal">
-        <!-- Contenu identique -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Facial Treatment</h2>
+                <button class="close-btn" onclick="closeModal('facial-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>Men's Skincare Solutions</h3>
+                    <p>Our facial treatments are specifically designed for men's skin, addressing common concerns like razor burn, ingrown hairs, oiliness, and environmental damage.</p>
+                </div>
+                <div class="service-details">
+                    <div class="service-feature">
+                        <h4>Deep Cleansing</h4>
+                        <p>Thorough cleansing to remove impurities and excess oil.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Exfoliation</h4>
+                        <p>Gentle exfoliation to smooth skin and prevent ingrown hairs.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Extractions</h4>
+                        <p>Professional removal of blackheads and impurities.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Hydration</h4>
+                        <p>Moisturizing treatments to restore skin's balance.</p>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>Benefits</h3>
+                    <p>Regular facial treatments can improve skin texture, reduce signs of aging, prevent ingrown hairs, and provide a healthier complexion. Our estheticians will recommend a treatment plan based on your skin type and concerns.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <div id="premium-modal" class="modal">
-        <!-- Contenu identique -->
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 class="modal-title">Premium Grooming Package</h2>
+                <button class="close-btn" onclick="closeModal('premium-modal')">×</button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-section">
+                    <h3>The Complete Grooming Experience</h3>
+                    <p>Our premium grooming package is the ultimate indulgence for the modern gentleman. This comprehensive service combines our most popular treatments into one luxurious experience.</p>
+                </div>
+                <div class="service-details">
+                    <div class="service-feature">
+                        <h4>Haircut & Style</h4>
+                        <p>Precision haircut with personalized styling consultation.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Hot Towel Shave</h4>
+                        <p>Traditional straight razor shave with premium products.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Beard Trim & Care</h4>
+                        <p>Professional beard shaping and conditioning treatment.</p>
+                    </div>
+                    <div class="service-feature">
+                        <h4>Facial Treatment</h4>
+                        <p>Deep cleansing, exfoliation, and hydrating facial.</p>
+                    </div>
+                </div>
+                <div class="modal-section">
+                    <h3>What's Included</h3>
+                    <p>The premium grooming package includes a consultation with our master barber, precision haircut, traditional hot towel shave, beard shaping and conditioning, deep cleansing facial, shoulder and neck massage, and personalized product recommendations. Allow approximately 2 hours for this complete grooming experience.</p>
+                </div>
+            </div>
+        </div>
     </div>
 
     <script>
@@ -1858,34 +2038,42 @@
             });
         });
 
-        // Modal functions
+        // Modal functions - CORRECTED VERSION
         function openModal(modalId) {
-            document.getElementById(modalId).style.display = 'block';
-            document.body.style.overflow = 'hidden';
+            console.log('Opening modal:', modalId); // Debug log
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.add('active');
+                document.body.style.overflow = 'hidden';
+            } else {
+                console.error('Modal not found:', modalId);
+            }
         }
 
         function closeModal(modalId) {
-            document.getElementById(modalId).style.display = 'none';
-            document.body.style.overflow = 'auto';
+            console.log('Closing modal:', modalId); // Debug log
+            const modal = document.getElementById(modalId);
+            if (modal) {
+                modal.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         }
 
-        // Close modal when clicking outside
-        window.addEventListener('click', (event) => {
-            document.querySelectorAll('.modal').forEach(modal => {
-                if (event.target === modal) {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
-                }
-            });
+        // Close modal when clicking outside - CORRECTED
+        document.addEventListener('click', (event) => {
+            if (event.target.classList.contains('modal')) {
+                event.target.classList.remove('active');
+                document.body.style.overflow = 'auto';
+            }
         });
 
-        // Close modal with Escape key
+        // Close modal with Escape key - CORRECTED
         document.addEventListener('keydown', (event) => {
             if (event.key === 'Escape') {
                 document.querySelectorAll('.modal').forEach(modal => {
-                    modal.style.display = 'none';
-                    document.body.style.overflow = 'auto';
+                    modal.classList.remove('active');
                 });
+                document.body.style.overflow = 'auto';
                 closeMobileMenu();
             }
         });
@@ -1895,6 +2083,12 @@
             if (window.innerWidth > 968) {
                 closeMobileMenu();
             }
+        });
+
+        // Debug: Log all modal elements
+        console.log('Available modals:', document.querySelectorAll('.modal').length);
+        document.querySelectorAll('.modal').forEach(modal => {
+            console.log('Modal ID:', modal.id);
         });
     </script>
 </body>
