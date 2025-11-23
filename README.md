@@ -25,7 +25,7 @@ Open index.html in your browser
 No build process required
 
 ## Live Demo
-View Live Demo
+[View Live Demo](https://barberhouse01.netlify.app/)
 
 ## Technologies
 HTML5
