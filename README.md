@@ -44,11 +44,12 @@ Barber house
 ```
 
 ## Live Demo
-[View Live Demo](https://barberhouse01.netlify.app/)
+[🚀 Démo en ligne](https://barberhouse01.netlify.app/)
 
 ## Quick Start
-Clone the repository
+```bash
+# Clone the repository
+git clone https://github.com/username/cleaning-company-template.git
 
-Open index.html in your browser
-
-No build process required
+# Open the website
+cd Barbershop-Website && open index.html
