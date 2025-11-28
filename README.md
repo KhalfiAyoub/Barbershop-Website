@@ -24,6 +24,23 @@ Open index.html in your browser
 
 No build process required
 
+## 📁 Project Structure
+```
+Barber house
+├─ assets
+│  ├─ css
+│  │  └─ style.css
+│  ├─ icon
+│  │ 
+│  ├─ img
+│  │  
+│  └─ js
+│     └─ main.js
+├─ index.html
+└─ README.md
+
+```
+
 ## Live Demo
 [View Live Demo](https://barberhouse01.netlify.app/)
 
