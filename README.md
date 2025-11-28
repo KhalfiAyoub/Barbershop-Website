@@ -1,6 +1,7 @@
-# Barbershop-Website
-Barber House - Premium Grooming
-A modern, responsive barbershop website with elegant dark theme, smooth animations, and interactive service showcases. Features team profiles, customer testimonials, booking functionality, and mobile-optimized navigation. Built with HTML5, CSS3, and JavaScript.
+# BarberShop-Template
+Premium Barber Shop Website Template
+
+A modern, responsive barbershop website template with elegant dark theme, smooth animations, and interactive service showcases. Features team profiles, customer testimonials, booking functionality, and mobile-optimized navigation. Perfect for barbershops, hair salons, and grooming services.
 
 ## Features
 🎨 Modern dark theme with gold accents
@@ -9,13 +10,15 @@ A modern, responsive barbershop website with elegant dark theme, smooth animatio
 
 ✨ Smooth animations and transitions
 
-💼 Interactive service modals
+💼 Interactive service showcases
 
-👥 Team member showcase
+👥 Team member profiles
 
 ⭐ Customer testimonials
 
-📞 Contact & booking form
+📅 Booking functionality
+
+📞 Contact & appointment forms
 
 ## 🛠️ Technologies
 
@@ -42,7 +45,7 @@ Barber house
 ```
 
 ## Live Demo
-[🚀 Démo en ligne](https://barberhouse01.netlify.app/)
+[🚀 View Live Demo](https://barberhouse01.netlify.app/)
 
 ## Quick Start
 ```bash
