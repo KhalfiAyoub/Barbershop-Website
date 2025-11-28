@@ -17,33 +17,6 @@ A modern, responsive barbershop website with elegant dark theme, smooth animatio
 
 📞 Contact & booking form
 
-## Quick Start
-Clone the repository
-
-Open index.html in your browser
-
-No build process required
-
-## 📁 Project Structure
-```
-Barber house
-├─ assets
-│  ├─ css
-│  │  └─ style.css
-│  ├─ icon
-│  │ 
-│  ├─ img
-│  │  
-│  └─ js
-│     └─ main.js
-├─ index.html
-└─ README.md
-
-```
-
-## Live Demo
-[View Live Demo](https://barberhouse01.netlify.app/)
-
 ## Technologies
 HTML5
 
@@ -55,5 +28,27 @@ Font Awesome Icons
 
 Google Fonts
 
-## License
-MIT License
+## 📁 Project Structure
+```
+Barber house
+├─ assets
+│  ├─ css
+│  │  └─ style.css
+│  ├─ icon
+│  ├─ img
+│  └─ js
+│     └─ main.js
+├─ index.html
+└─ README.md
+
+```
+
+## Live Demo
+[View Live Demo](https://barberhouse01.netlify.app/)
+
+## Quick Start
+Clone the repository
+
+Open index.html in your browser
+
+No build process required
